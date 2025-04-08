@@ -1,0 +1,57 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemma 3 Chat</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat-header">
+        <div class="logo">
+          <i class="fas fa-robot"></i>
+          <h1>Gemma 3 Chat</h1>
+        </div>
+        <div class="status" id="status-indicator">
+          <span class="status-dot offline"></span>
+          <span class="status-text">Checking status...</span>
+        </div>
+      </div>
+
+      <div class="chat-container" id="chat-container">
+        <div class="message bot">
+          <div class="message-content">
+            <p>
+              Hello! I'm your Gemma 3 1B assistant. How can I help you today?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <textarea
+          id="user-input"
+          placeholder="Type your message here..."
+          rows="1"
+        ></textarea>
+        <button id="send-button" class="send-button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+        <button id="stop-button" class="stop-button">
+          <i class="fas fa-stop"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

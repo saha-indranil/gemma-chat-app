@@ -1,0 +1,7 @@
+FROM ollama/ollama:latest
+
+# Create a startup script to pull the model when container starts
+COPY start-ollama.sh /start-ollama.sh
+RUN chmod +x /start-ollama.sh
+
+CMD ["/start-ollama.sh"]
