@@ -5,7 +5,7 @@ A modern web application to chat with the Gemma 3 1B model via Ollama, with supp
 ## Features
 
 - Clean, modern user interface
-- Real-time streaming responses from Gemma 3
+- Real-time streaming responses from Gemma 3 1B parameter model (32k context window)
 - Stop button to interrupt ongoing responses
 - Status indicators for model connectivity
 - Code block formatting
@@ -61,13 +61,12 @@ For deployment on servers where Ollama isn't pre-installed or for easier setup, 
 ### Prerequisites
 
 - Docker and Docker Compose
-- (Optional) NVIDIA GPU with appropriate drivers for faster inference
 
 ### Deployment Steps
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/gemma-chat-app.git
+   git clone https://github.com/saha-indranil/gemma-chat-app.git
    cd gemma-chat-app
    ```
 
@@ -78,7 +77,7 @@ For deployment on servers where Ollama isn't pre-installed or for easier setup, 
 
 3. The application will be available at http://localhost:5000
 
-4. Initial startup may take some time as the Gemma 3 1B model (~1.5GB) is downloaded.
+4. Initial startup may take some time as the Gemma 3 1B model (~815 MB) is downloaded.
 
 ### Without GPU
 
@@ -137,5 +136,4 @@ If you encounter any issues with local setup:
 1. Check container status: `docker-compose ps`
 2. View container logs: `docker-compose logs -f`
 3. Make sure your server has enough RAM (4GB minimum recommended)
-4. For GPU acceleration, verify that your NVIDIA drivers and Docker configuration are correctly set up
-5. If the model download seems stuck, check network connectivity and disk space
+4. If the model download seems stuck, check network connectivity and disk space
